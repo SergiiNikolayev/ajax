@@ -60,6 +60,8 @@
 </head>
 <body>
     <p>Ajax!</p>
+    <a href="countries.php">Countries</a><br>
+    <hr>
     <input type="text" id="name" placeholder="введите логин"/>
     <input type="button" id="done" value="Готово"/>
     <p id="load" style="cursor: pointer">Загрузить данные</p>
