@@ -6,9 +6,13 @@
  * Time: 6:53 PM
  */
 ?>
-<label>Укажите страну</label>
+<label>РЈРєР°Р¶РёС‚Рµ СЃС‚СЂР°РЅСѓ</label>
 <select name="country">
     <option value="0" selected="selected"></option>
-    <option value="1" selected="selected">Омерига</option>
-    <option value="1" selected="selected">Рашка</option>
+    <option value="1" selected="selected">РћРјРµСЂРёРіР°</option>
+    <option value="1" selected="selected">Р Р°С€РєР°</option>
+</select>
+<label>Р“РѕСЂРѕРґР°</label>
+<select name="city">
+    <option value="0"></option>
 </select>
