@@ -59,15 +59,49 @@
 </script>
 </head>
 <body>
-    <p>Ajax!</p>
-    <a href="countries.php">Countries</a><br>
-    <hr>
+    <h2>Ajax!</h2>
+
     <input type="text" id="name" placeholder="введите логин"/>
     <input type="button" id="done" value="Готово"/>
     <p id="load" style="cursor: pointer">Загрузить данные</p>
     <img id="gif" width="130px" height="90px" src="img/gear.gif" style="display: none; float: left">
-    <div id="information" style="float: left"></div>
+    <div>
+        <div id="information"></div>
+    </div><br>
 
+    <div style="height: 150px"></div>
+ <!-- |||||||||||||||||||||||||||||||||2nd block|||||||||||||||||||||||||||||||||||||| -->
+
+    <h2>JSON</h2>
+    <script>
+        $(document).ready (function(){
+            $("select[name='country']").bind("change", function(){
+                $("select[name='city']").empty(); // if country not selected make city empty
+                $.get(
+                    "countries.php",
+                    {country: $("select[name='country']").val()},
+                    function (data) {
+                        data = JSON.parse(data);//coded json that in php file countries.php
+
+                        for (var id in data){
+                            $("select[name='city']").append($("<option value='" + id + "'>" + data[id] + "</option>"));
+                        }
+                    });
+                });
+            });
+    </script>
+
+
+    <label>Укажите страну</label>
+    <select name="country">
+        <option value="0" selected="selected"></option>
+        <option value="1" selected="selected">Омерига</option>
+        <option value="2" selected="selected">Рашка</option>
+    </select>
+    <label>Города</label>
+    <select name="city">
+        <option value="0"></option>
+    </select>
 
 </body>
 

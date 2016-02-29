@@ -1,18 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: HareKrishna
- * Date: 2/29/2016
- * Time: 6:53 PM
- */
+    sleep(0.5);
+    if($_GET["country"] == 1){
+        echo json_encode(array(
+        "1"=> "Washington",
+        "2"=> "Sietle"
+        ));
+    }else if($_GET["country"] == 2){
+        echo json_encode(array(
+            "3" => "Paris",
+            "4" => "Marcell"
+        ));
+    }
 ?>
-<label>Укажите страну</label>
-<select name="country">
-    <option value="0" selected="selected"></option>
-    <option value="1" selected="selected">Омерига</option>
-    <option value="1" selected="selected">Рашка</option>
-</select>
-<label>Города</label>
-<select name="city">
-    <option value="0"></option>
-</select>
