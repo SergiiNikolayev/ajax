@@ -13,7 +13,7 @@
     }
 
     function funcSuccess(data){
-        $("#out").text("///////");
+        $("#out").text("////");
         $("#information").text(data);
     }
 
