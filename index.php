@@ -55,7 +55,6 @@
         $("#gif").hide();
     });
 
-
 </script>
 </head>
 <body>
