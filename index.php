@@ -43,7 +43,7 @@
                         alert( $("#name") + "имя занято");
                     else
                         $("#information").text(data);
-                }
+                } //there is no any comma or other
             });
         });
     });
@@ -68,8 +68,8 @@
     <div>
         <div id="information"></div>
     </div><br>
-
     <div style="height: 150px"></div>
+
  <!-- |||||||||||||||||||||||||||||||||2nd block|||||||||||||||||||||||||||||||||||||| -->
 
     <h2>JSON</h2>
@@ -85,7 +85,7 @@
 
                         for (var id in data){
                             $("select[name='city']").append($("<option value='" + id + "'>" + data[id] + "</option>"));
-                        }
+                        } //there is also no commas
                     });
                 });
             });
@@ -95,8 +95,8 @@
     <label>Укажите страну</label>
     <select name="country">
         <option value="0" selected="selected"></option>
-        <option value="1" selected="selected">Омерига</option>
-        <option value="2" selected="selected">Рашка</option>
+        <option value="1" selected="selected">US</option>
+        <option value="2" selected="selected">France</option>
     </select>
     <label>Города</label>
     <select name="city">
